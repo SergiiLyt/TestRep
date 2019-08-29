@@ -8,9 +8,15 @@ trigger:
 
 strategy:
   matrix:
-    vmImage: 'ubuntu-latest'
-    vmImage: 'macOS-10.13'
-    vmImage: 'vs2017-win2016'
+    ubuntu:
+      NewImage: 'ubuntu-latest'
+    macOS:
+      NewImage: 'macOS-10.13'
+    win:
+      NewImage: 'vs2017-win2016'
+
+pool:
+  vmImage: ($NewImage)
 
 steps:
 - script: echo Hello, world!
