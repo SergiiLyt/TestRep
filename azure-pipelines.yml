@@ -16,7 +16,7 @@ strategy:
       NewImage: 'vs2017-win2016'
 
 pool:
-  vmImage: ($NewImage)
+  vmImage: $(NewImage)
 
 steps:
 - script: echo Hello, world!
